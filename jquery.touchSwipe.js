@@ -1816,6 +1816,10 @@
      * @inner
      */
     function calculateDirection(startPoint, endPoint) {
+      if (startPoint.x === endPoint.x && startPoint.y === endPoint.y){
+        return "STAY";
+      }
+      
       var angle = calculateAngle(startPoint, endPoint);
 
       if ((angle <= 45) && (angle >= 0)) {
